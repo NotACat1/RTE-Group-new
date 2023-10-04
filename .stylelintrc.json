@@ -3,6 +3,13 @@
   "plugins": ["stylelint-scss", "stylelint-less"],
   "defaultSeverity": "warning",
   "rules": {
+    "comment-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
+      }
+    ],
     "indentation": 2,
     "block-no-empty": true,
     "color-no-invalid-hex": true,
