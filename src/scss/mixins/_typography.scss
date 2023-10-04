@@ -1,0 +1,47 @@
+// типографика
+@mixin typography-custom($font-size, $font-style, $font-weight, $line-height) {
+  font-size: $font-size;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+// типографика h1
+@mixin typography-h1 {
+  @include typography-custom(54px, normal, 800, 120%);
+}
+
+// типографика h2
+@mixin typography-h2 {
+  @include typography-custom(36px, normal, 700, 125%);
+}
+
+// типографика h3
+@mixin typography-h3 {
+  @include typography-custom(28px, normal, 700, 125%);
+}
+
+// типографика h4
+@mixin typography-h4 {
+  @include typography-custom(20px, normal, 700, 130%);
+}
+
+// типографика lead
+@mixin typography-lead {
+  @include typography-custom(24px, normal, 500, 145%);
+}
+
+// типографика body
+@mixin typography-body {
+  @include typography-custom(16px, normal, 400, 150%);
+}
+
+// типографика body-semibold
+@mixin typography-body-semibold {
+  @include typography-custom(16px, normal, 600, 150%);
+}
+
+// типографика caption
+@mixin typography-caption {
+  @include typography-custom(12px, normal, 400, 100%);
+}

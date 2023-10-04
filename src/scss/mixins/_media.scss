@@ -1,0 +1,23 @@
+/* stylelint-disable */
+@import '@varibles/breakpoints';
+/* stylelint-enable */
+
+// медиазапрос в зависимости от контрольных точек
+@mixin media($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint #{$breakpoint} не найден в переменной $breakpoints";
+  }
+}
+
+// медиазапрос для контрольных точек
+@mixin media-breakpoint-up($breakpoint) {
+  $min-width: map-get($breakpoints, $breakpoint);
+
+  @media (min-width: $min-width) {
+    @content;
+  }
+}
