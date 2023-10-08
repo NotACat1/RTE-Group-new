@@ -1,0 +1,87 @@
+.input {
+  @include reset-block;
+
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    @include reset-text;
+    @include typography-body;
+
+    color: $color-gray;
+    font-feature-settings:
+      'clig' off,
+      'liga' off;
+    font-family: $font-family-main;
+    position: absolute;
+    top: 16px;
+    left: 24px;
+
+    &_error {
+      color: $color-error;
+    }
+  }
+
+  &__input {
+    @include reset-input;
+    @include typography-body;
+
+    box-sizing: border-box;
+    padding: 23px 24px 9px;
+    border-radius: 32px;
+    border: 1px solid $color-border-gray;
+    color: $color-gray;
+    font-feature-settings:
+      'clig' off,
+      'liga' off;
+    font-family: $font-family-main;
+    transition: border 200ms ease-out;
+
+    &_error {
+      border-color: $color-error;
+      color: $color-error;
+    }
+
+    &:hover {
+      border-color: $color-main;
+    }
+
+    &:valid {
+      & ~ .input__label {
+        @include typography-body-small;
+
+        top: 9px;
+      }
+    }
+
+    &:focus {
+      & ~ .input__label {
+        @include typography-body-small;
+
+        color: $color-main;
+        top: 9px;
+      }
+
+      border-color: $color-main;
+      color: $color-main;
+    }
+  }
+
+  &__error {
+    @include typography-caption-sub;
+
+    box-sizing: border-box;
+    padding: 8px 24px;
+    color: $color-gray;
+    font-feature-settings:
+      'clig' off,
+      'liga' off;
+    font-family: $font-family-main;
+
+    &_error {
+      color: $color-error;
+    }
+  }
+}
