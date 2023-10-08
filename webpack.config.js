@@ -37,10 +37,14 @@ module.exports = {
   },
   resolve: {
     alias: {
+      '@blocks': path.resolve(__dirname + '/src/blocks'),
+      '@components': path.resolve(__dirname + '/src/components'),
+      '@fonts': path.resolve(__dirname + '/src/fonts'),
       '@images': path.resolve(__dirname + '/src/images'),
       '@scss': path.resolve(__dirname + '/src/scss'),
       '@mixins': path.resolve(__dirname + '/src/scss/mixins'),
       '@varibles': path.resolve(__dirname + '/src/scss/varibles'),
+      '@utils': path.resolve(__dirname + '/src/utils'),
     },
   },
   devServer: {
