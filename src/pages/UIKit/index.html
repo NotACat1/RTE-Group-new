@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Meta tags of site pages -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Этот UI Kit предназначен для ускорения разработки, упрощения процесса проектирования и обеспечения соответствия дизайна всему сайту. Он может содержать CSS-стили, JavaScript-компоненты, иллюстрации и другие ресурсы, необходимые для создания пользовательского интерфейса."
+    />
+    <meta name="keywords" content="HTML5, CSS, EJS, JS, RTE Group" />
+    <meta name="author" content="NotACat" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" href="<%= require('@images/favicon/apple-touch-icon.png') %>" />
+    <link rel="icon" href="<%= require('@images/favicon/favicon.ico') %>" sizes="16x16" type="image/x-icon" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="RTE Group: UI Kit" />
+    <meta
+      property="og:description"
+      content="UI Kit предназначен для ускорения разработки, упрощения процесса проектирования и обеспечения соответствия дизайна всему сайту. Он может содержать CSS-стили, JavaScript-компоненты, иллюстрации и другие ресурсы, необходимые для создания пользовательского интерфейса."
+    />
+    <meta property="og:url" content="https://notacat1.github.io/RTE-Group-new/" />
+    <meta property="og:image" content="https://ie.wampi.ru/2023/10/04/social.png" />
+    <meta property="og:site_name" content="РТ Экспресс" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <title>RTE Group: UI Kit</title>
+  </head>
+
+  <body class="page">
+    <header></header>
+    <main>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">button</h2>
+          <button class="button button_style_primary">Button</button>
+          <button class="button button_style_outline">Button</button>
+          <button class="button button_style_tertiary">Button</button>
+          <button class="button button_style_primary button_width_full">Button</button>
+          <button class="button button_style_outline button_width_full">Button</button>
+          <button class="button button_style_tertiary button_width_full">Button</button>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">input</h2>
+          <div class="input">
+            <input class="input__input" type="text" id="input-1" name="input-1" required />
+            <label class="input__label" for="input-1">Title</label>
+            <span class="input__error">Description / Error</span>
+          </div>
+          <div class="input">
+            <input class="input__input input__input_error" type="text" id="input-2" name="input-2" required />
+            <label class="input__label input__label_error" for="input-2">Title</label>
+            <span class="input__error input__error_error">Description / Error</span>
+          </div>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">checkbox</h2>
+          <input class="checkbox" type="checkbox" />
+          <input class="checkbox checkbox_error" type="checkbox" />
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">badge</h2>
+          <ul class="uikit__list">
+            <li class="badge">badge</li>
+          </ul>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">case</h2>
+          <ul class="uikit__list uikit__list_full">
+            <li class="case">
+              <a class="case__elem" href="#" target="_blank">
+                <div class="case__img"></div>
+                <div class="case__container">
+                  <h3 class="case__title">Кейс</h3>
+                  <p class="case__description">
+                    Перевозка кранов – сложный и ответственный процесс, требующий особой тщательности. Наша команда
+                    гарантирует безопасное перемещение кранов любого типа и размера. Специализированная техника и
+                    опытные водители обеспечат успешную доставку.
+                  </p>
+                  <ul class="case__list">
+                    <li class="badge">Перевозка крупногабаритных грузов</li>
+                    <li class="badge">Казань</li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">advantages</h2>
+          <ul class="uikit__list uikit__list_full">
+            <li class="advantages">
+              <img class="advantages__img" src="<%= require('@images/advantages/safety.svg') %>" alt="" />
+              <h3 class="advantages__title">Безопасность</h3>
+              <p class="advantages__description">
+                Ваш экскаватор в надежных руках с RTE Group. Наша команда профессионалов следит за каждым этапом
+                перевозки, используя современное оборудование и проверенные методы для гарантии безопасности вашей
+                техники.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">feedback</h2>
+          <ul class="uikit__list uikit__list_full">
+            <li class="feedback">
+              <div class="feedback__avatar">КП</div>
+              <h3 class="feedback__name">Константин Петров</h3>
+              <p class="feedback__text">
+                Очень приятно работать с этой компанией профессионалов. Все очень организованно от загрузки до выгрузки,
+                оплата без проблем, в общем от работы только положительные эмоции. Рекомендую, а компании желаю успехов
+                и процветания. Отдельное спасибо Андрею!
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">team</h2>
+          <ul class="uikit__list uikit__list_full">
+            <li class="team">
+              <div
+                class="team__avatar"
+                style="background-image: url(<%=require('@images/team/marat_giniyatullin.jpg')%>)"
+              ></div>
+              <div class="team__info">
+                <h3 class="team__name">Марат Гиниятуллин</h3>
+                <p class="team__description">Генеральный директор</p>
+              </div>
+              <p class="team__text">
+                Марат является основателем и душой компании, имея более 10 лет опыта в сфере ЖКХ и строительства. Его
+                организаторские способности позволяют компании расти и развиваться каждый день.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">city-link</h2>
+          <ul class="uikit__list uikit__list_full">
+            <li class="city-link">
+              <a class="city-link__elem" href="#" target="_blank">
+                <img class="city-link__gerb" src="<%= require('@images/gerbs/cheboksary.svg') %>" alt="" />
+                <h3 class="city-link__title">Доставка в Казани</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">table</h2>
+          <table class="table">
+            <tr>
+              <th class="table__th">Заголовок 1</th>
+            </tr>
+            <tr>
+              <td class="table__td">Ячейка 1</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">services</h2>
+          <ul class="uikit__list uikit__list_full">
+            <li class="services services_style_1">
+              <img
+                class="services__img"
+                src="<%= require('@images/services/nonstandard_cargo_transportation.svg') %>"
+                alt=""
+              />
+              <h3 class="services__title">Перевозка крупногабаритных грузов</h3>
+              <p class="services__description">
+                RTE Group доставит гидрогенераторы, вышки, металлоконструкции, детали промышленного оборудования и
+                другие грузы, с которыми обычные грузовики не справятся. Здесь нужен трал с тягачом. Помимо
+                непосредственной перевозки получим все необходимые разрешения от надзорных органов и подберем
+                оптимальный маршрут.
+              </p>
+              <a class="button button_style_primary" href="#" target="_blank">Подробнее</a>
+            </li>
+            <li class="services services_style_2">
+              <img
+                class="services__img"
+                src="<%= require('@images/services/nonstandard_cargo_transportation.svg') %>"
+                alt=""
+              />
+              <h3 class="services__title">Перевозка крупногабаритных грузов</h3>
+              <p class="services__description">
+                RTE Group доставит гидрогенераторы, вышки, металлоконструкции, детали промышленного оборудования и
+                другие грузы, с которыми обычные грузовики не справятся. Здесь нужен трал с тягачом. Помимо
+                непосредственной перевозки получим все необходимые разрешения от надзорных органов и подберем
+                оптимальный маршрут.
+              </p>
+              <a class="button button_style_primary" href="#" target="_blank">Подробнее</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">whywe</h2>
+          <ul class="uikit__list uikit__list_full">
+            <li class="whywe">
+              <div class="whywe__img">1</div>
+              <h3 class="whywe__title">Опытные логисты и водители</h3>
+              <p class="whywe__description">
+                Сумеют построить маршрут, который сэкономит ваши деньги и время и довезут ваш груз вовремя, в целости и
+                сохранности. Средний опыт наших сотрудников – 15 лет в сфере грузоперевозок.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">faq</h2>
+          <ul class="uikit__list uikit__list_full">
+            <li class="faq">
+              <div class="faq__header">
+                <h3 class="faq__title">Как долго займет доставка моего груза?</h3>
+                <div class="faq__btn"></div>
+              </div>
+              <p class="faq__text">
+                Время доставки вашего груза зависит от расстояния между пунктами отправления и назначения. Наши грузовые
+                автомобили проезжают в среднем 600-800 км в сутки. Это означает, что если расстояние между пунктами
+                составляет 1200 км, то доставка может занять от 1 до 2 дней в зависимости от дорожных условий. Если же
+                расстояние меньше, то доставка займет меньше времени.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
