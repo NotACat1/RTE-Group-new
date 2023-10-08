@@ -1,0 +1,55 @@
+@font-face {
+  font-family: Montserrat;
+  src:
+    local('Montserrat'),
+    local('Montserrat-Regular'),
+    url('Montserrat-Regular.woff2') format('woff2'),
+    url('Montserrat-Regular.woff') format('woff'),
+    url('Montserrat-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src:
+    local('Montserrat-Medium'),
+    url('Montserrat-Medium.woff2') format('woff2'),
+    url('Montserrat-Medium.woff') format('woff'),
+    url('Montserrat-Medium.ttf') format('ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src:
+    local('Montserrat-SemiBold'),
+    url('Montserrat-SemiBold.woff2') format('woff2'),
+    url('Montserrat-SemiBold.woff') format('woff'),
+    url('Montserrat-SemiBold.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src:
+    local('Montserrat-Bold'),
+    url('Montserrat-Bold.woff2') format('woff2'),
+    url('Montserrat-Bold.woff') format('woff'),
+    url('Montserrat-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src:
+    local('Montserrat-Bold'),
+    url('Montserrat-ExtraBold.woff2') format('woff2'),
+    url('Montserrat-ExtraBold.woff') format('woff'),
+    url('Montserrat-ExtraBold.ttf') format('ttf');
+  font-weight: 800;
+  font-style: normal;
+}
