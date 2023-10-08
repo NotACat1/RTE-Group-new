@@ -1,0 +1,38 @@
+.uikit {
+  @include reset-block;
+
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  &__conteiner {
+    @include reset-block;
+    @include container-max-widths;
+
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px dashed #9747ff;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  &__title {
+    @include reset-text;
+    @include typography-h2;
+
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+
+  &__list {
+    @include reset-list;
+
+    &_full {
+      width: 100%;
+    }
+  }
+}
