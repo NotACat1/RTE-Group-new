@@ -1,0 +1,55 @@
+.button {
+  @include reset-link;
+  @include reset-button;
+  @include typography-body-semibold;
+
+  @include media(md) {
+    width: 100%;
+  }
+
+  box-sizing: border-box;
+  padding: 16px 24px;
+  border-radius: 32px;
+  color: $color-main;
+  text-align: center;
+  font-feature-settings:
+    'clig' off,
+    'liga' off;
+  font-family: $font-family-main;
+
+  &_style {
+    border-radius: 32px;
+
+    &_primary {
+      background-color: $color-green;
+      transition: background 200ms ease-out;
+
+      &:hover {
+        background-color: $color-green-darker;
+      }
+    }
+
+    &_outline {
+      border: 1px solid $color-green;
+      transition: border 200ms ease-out;
+
+      &:hover {
+        border-color: $color-green-darker;
+      }
+    }
+
+    &_tertiary {
+      transition: background 200ms ease-out;
+
+      &:hover {
+        background: $color-bg-white;
+      }
+    }
+  }
+
+  &_width {
+    &_full {
+      width: 100%;
+    }
+  }
+}
