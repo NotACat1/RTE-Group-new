@@ -1,0 +1,11 @@
+.badge {
+  @include reset-block;
+  @include typography-caption;
+
+  padding: 6px 12px;
+  border-radius: 24px;
+  background-color: $color-bg-white;
+  text-align: center;
+  color: $color-main;
+  font-family: $font-family-main;
+}
