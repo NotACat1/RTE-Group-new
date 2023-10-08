@@ -1,0 +1,19 @@
+.checkbox {
+  @include reset-checkbox;
+
+  width: 24px;
+  height: 24px;
+  background-image: url('@images/icons/checkbox_off.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: background 200ms ease-out;
+
+  &_error {
+    background-image: url('@images/icons/checkbox_error.svg');
+  }
+
+  &:checked {
+    background-image: url('@images/icons/checkbox_on.svg');
+  }
+}
