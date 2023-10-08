@@ -36,6 +36,11 @@
   @include typography-custom(16px, normal, 400, 150%);
 }
 
+// типографика body-small
+@mixin typography-body-small {
+  @include typography-custom(12px, normal, 400, 120%);
+}
+
 // типографика body-semibold
 @mixin typography-body-semibold {
   @include typography-custom(16px, normal, 600, 150%);
@@ -44,4 +49,19 @@
 // типографика caption
 @mixin typography-caption {
   @include typography-custom(12px, normal, 400, 100%);
+}
+
+// типографика SubCaption
+@mixin typography-caption-sub {
+  @include typography-custom(12px, normal, 500, 120%);
+}
+
+// типографика numbering
+@mixin typography-numbering {
+  @include typography-custom(24px, normal, 500, normal);
+}
+
+// типографика numbering
+@mixin typography-numbering-small {
+  @include typography-custom(16px, normal, 500, normal);
 }
