@@ -1,0 +1,49 @@
+.feedback {
+  @include reset-block;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: 48px auto;
+  gap: 16px;
+  grid-template-areas:
+    'A B'
+    'C C';
+
+  &__avatar {
+    @include reset-block;
+    @include typography-body-semibold;
+
+    grid-area: A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    border-radius: 48px;
+    background-color: $color-bg-white;
+    color: $color-main;
+    font-family: $font-family-main;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &__name {
+    @include reset-text;
+    @include typography-body-semibold;
+
+    grid-area: B;
+    align-self: center;
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+
+  &__text {
+    @include reset-text;
+    @include typography-body;
+
+    grid-area: C;
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+}
