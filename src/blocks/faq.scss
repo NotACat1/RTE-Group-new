@@ -1,0 +1,75 @@
+.faq {
+  @include reset-block;
+
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid $color-darkgray;
+
+  &__header {
+    @include reset-block;
+
+    box-sizing: border-box;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    transition: opacity 200ms ease-out;
+
+    @include media(md) {
+      padding: 16px 0;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__title {
+    @include reset-text;
+    @include typography-lead;
+
+    @include media(md) {
+      @include typography-body-semibold;
+    }
+
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+
+  &__btn {
+    @include reset-button;
+
+    align-self: center;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('@images/icons/faq_down.svg');
+
+    &_open {
+      background-image: url('@images/icons/faq_up.svg');
+    }
+  }
+
+  &__text {
+    @include reset-text;
+    @include typography-body;
+
+    box-sizing: border-box;
+    color: $color-main;
+    font-family: $font-family-main;
+    overflow-y: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition:
+      max-height 0.5s ease-out,
+      opacity 0.5s ease-out;
+
+    &_open {
+      max-height: 500px;
+      padding-bottom: 16px;
+      opacity: 0.7;
+    }
+  }
+}
