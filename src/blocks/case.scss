@@ -1,0 +1,80 @@
+.case {
+  @include reset-block;
+
+  width: 100%;
+
+  &__elem {
+    @include reset-link;
+
+    display: block;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 24px;
+    border: 1px solid $color-border-white;
+    transition: border 200ms ease-out;
+
+    &:hover {
+      border-color: $color-main;
+    }
+  }
+
+  &__img {
+    @include reset-block;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 144px;
+    border-radius: 16px;
+    background-color: $color-bg-card;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &__container {
+    @include reset-block;
+
+    box-sizing: border-box;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    @include media(md) {
+      padding: 16px;
+      gap: 16px;
+    }
+  }
+
+  &__title {
+    @include reset-text;
+    @include typography-h4;
+
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+
+  &__description {
+    @include reset-text;
+    @include typography-body;
+
+    color: $color-main;
+    font-family: $font-family-main;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 72px;
+  }
+
+  &__list {
+    @include reset-list;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
