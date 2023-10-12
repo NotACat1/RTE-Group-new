@@ -48,22 +48,43 @@
         <div class="uikit__conteiner">
           <h2 class="uikit__title">input</h2>
           <div class="input">
-            <input class="input__input" type="text" id="input-1" name="input-1" required />
+            <input
+              class="input__input"
+              title="Введите текст"
+              type="text"
+              id="input-1"
+              name="input-1"
+              placeholder=""
+              data-mes-err="Description / Error"
+              required
+            />
             <label class="input__label" for="input-1">Title</label>
-            <span class="input__error">Description / Error</span>
+            <span class="input__error" id="input-1-error">Description / Error</span>
           </div>
           <div class="input">
-            <input class="input__input input__input_error" type="text" id="input-2" name="input-2" required />
+            <input
+              class="input__input input__input_error"
+              title="Введите текст"
+              type="text"
+              id="input-2"
+              name="input-2"
+              data-mes-err="Description / Error"
+              required
+            />
             <label class="input__label input__label_error" for="input-2">Title</label>
-            <span class="input__error input__error_error">Description / Error</span>
+            <span class="input__error input__error_error" id="input-2-error">Description / Error</span>
           </div>
         </div>
       </section>
       <section class="uikit">
         <div class="uikit__conteiner">
           <h2 class="uikit__title">checkbox</h2>
-          <input class="checkbox" type="checkbox" />
-          <input class="checkbox checkbox_error" type="checkbox" />
+          <div class="checkbox">
+            <input class="checkbox__input" title="Подтвердите" type="checkbox" required />
+          </div>
+          <div class="checkbox">
+            <input class="checkbox__input checkbox__input_error" title="Подтвердите" type="checkbox" required />
+          </div>
         </div>
       </section>
       <section class="uikit">
@@ -246,6 +267,220 @@
               </p>
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">form</h2>
+          <form
+            class="form"
+            action="/submit"
+            method="post"
+            id="main"
+            data-popup-title="Заявка отправлена!"
+            data-popup-subtitle="Мы свяжемся с вами в ближайшее время"
+            novalidate
+          >
+            <h2 class="form__title">Оставить заявку на перевозку</h2>
+            <fieldset class="form__fieldset">
+              <div class="input">
+                <input
+                  class="input__input"
+                  title="Введите свое имя"
+                  type="text"
+                  id="main-name"
+                  name="main-name"
+                  placeholder=""
+                  data-mes-err="Поле обязательно для заполнения"
+                  required
+                />
+                <label class="input__label" for="main-name">Имя<sup>*</sup></label>
+                <span class="input__error" id="main-name-error"></span>
+              </div>
+              <div class="input">
+                <input
+                  class="input__input"
+                  title="Введите свой телефонный номер"
+                  type="tel"
+                  id="main-tel"
+                  name="main-tel"
+                  pattern="\+7 \d{3} \d{3}-\d{2}-\d{2}"
+                  placeholder=""
+                  data-mes-err="Поле обязательно для заполнения"
+                  required
+                />
+                <label class="input__label" for="main-tel">Телефон<sup>*</sup></label>
+                <span class="input__error" id="main-tel-error"></span>
+              </div>
+              <div class="input">
+                <textarea
+                  class="input__input input__input_textarea"
+                  id="main-characteristic"
+                  name="main-characteristic"
+                  placeholder=""
+                  rows="4"
+                ></textarea>
+                <label class="input__label" for="main-characteristic">Краткая характеристика груза</label>
+              </div>
+              <div class="checkbox">
+                <input
+                  class="checkbox__input"
+                  title="Подтвердите согласие на обработку персональных данных"
+                  type="checkbox"
+                  required
+                />
+                <p class="checkbox__text">
+                  Согласен на обработку персональных данных в соответствии с
+                  <a class="checkbox__link" href="#" target="_blank">политикой конфиденциальности</a>
+                </p>
+              </div>
+            </fieldset>
+            <button class="button button_style_primary">Отправить</button>
+          </form>
+          <form
+            class="form"
+            action="/submit"
+            method="post"
+            id="contact"
+            data-popup-title="Ваше обращение отправлено"
+            data-popup-subtitle="Мы свяжемся с вами в ближайшее время"
+            novalidate
+          >
+            <h2 class="form__title">Связаться с нами</h2>
+            <fieldset class="form__fieldset">
+              <div class="input">
+                <input
+                  class="input__input"
+                  title="Введите свое имя"
+                  type="text"
+                  id="contact-name"
+                  name="contact-name"
+                  placeholder=""
+                  data-mes-err="Поле обязательно для заполнения"
+                  required
+                />
+                <label class="input__label" for="contact-name">Имя<sup>*</sup></label>
+                <span class="input__error" id="contact-name-error"></span>
+              </div>
+              <div class="input">
+                <input
+                  class="input__input"
+                  title="Введите свою электронную почту"
+                  type="email"
+                  id="contact-email"
+                  name="contact-email"
+                  placeholder=""
+                  data-mes-err="Поле обязательно для заполнения"
+                  required
+                />
+                <label class="input__label" for="contact-email">E-mail<sup>*</sup></label>
+                <span class="input__error" id="contact-email-error"></span>
+              </div>
+              <div class="input">
+                <textarea
+                  class="input__input input__input_textarea"
+                  id="contact-characteristic"
+                  name="contact-characteristic"
+                  placeholder=""
+                ></textarea>
+                <label class="input__label" for="contact-characteristic">Текст сообщения</label>
+              </div>
+              <div class="checkbox">
+                <input
+                  class="checkbox__input"
+                  title="Подтвердите согласие на обработку персональных данных"
+                  type="checkbox"
+                  required
+                />
+                <p class="checkbox__text">
+                  Согласен на обработку персональных данных в соответствии с
+                  <a class="checkbox__link" href="#" target="_blank">политикой конфиденциальности</a>
+                </p>
+              </div>
+            </fieldset>
+            <button class="button button_style_primary">Отправить</button>
+          </form>
+          <form
+            class="form"
+            action="/submit"
+            method="post"
+            id="vacancy"
+            data-popup-title="Ваше резюме отправлено"
+            data-popup-subtitle="Мы свяжемся с вами в ближайшее время"
+            novalidate
+          >
+            <h2 class="form__title">Отправить резюме</h2>
+            <fieldset class="form__fieldset">
+              <div class="input">
+                <input
+                  class="input__input"
+                  title="Введите свое имя"
+                  type="text"
+                  id="vacancy-name"
+                  name="vacancy-name"
+                  placeholder=""
+                  data-mes-err="Поле обязательно для заполнения"
+                  required
+                />
+                <label class="input__label" for="vacancy-name">Имя<sup>*</sup></label>
+                <span class="input__error" id="vacancy-name-error"></span>
+              </div>
+              <div class="input">
+                <input
+                  class="input__input"
+                  title="Введите свою электронную почту"
+                  type="email"
+                  id="vacancy-email"
+                  name="vacancy-email"
+                  placeholder=""
+                  data-mes-err="Поле обязательно для заполнения"
+                  required
+                />
+                <label class="input__label" for="vacancy-email">E-mail<sup>*</sup></label>
+                <span class="input__error" id="vacancy-email-error"></span>
+              </div>
+              <div class="input">
+                <input
+                  class="input__input"
+                  title="Введите свой телефонный номер"
+                  type="tel"
+                  id="vacancy-tel"
+                  name="vacancy-tel"
+                  placeholder=""
+                  data-mes-err="Поле обязательно для заполнения"
+                  required
+                />
+                <label class="input__label" for="vacancy-tel">Телефон<sup>*</sup></label>
+                <span class="input__error" id="vacancy-tel-error"></span>
+              </div>
+              <div class="checkbox">
+                <input
+                  class="checkbox__input"
+                  title="Подтвердите согласие на обработку персональных данных"
+                  type="checkbox"
+                  required
+                />
+                <p class="checkbox__text">
+                  Согласен на обработку персональных данных в соответствии с
+                  <a class="checkbox__link" href="#" target="_blank">политикой конфиденциальности</a>
+                </p>
+              </div>
+            </fieldset>
+            <button class="button button_style_primary">Отправить</button>
+          </form>
+          <div class="popup popup_success">
+            <div class="popup__container">
+              <img class="popup__img" src="<%= require('@images/icons/form_success.svg') %>" alt="" />
+              <div class="popup__info">
+                <h3 class="popup__title">Заявка отправлена!</h3>
+                <p class="popup__subtitle">Мы свяжемся с вами в ближайшее время</p>
+              </div>
+              <button
+                class="popup__btn-close"
+                style="background-image: url(<%=require('@images/icons/close.svg')%>)"
+              ></button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
