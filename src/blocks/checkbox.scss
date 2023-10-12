@@ -1,19 +1,56 @@
 .checkbox {
-  @include reset-checkbox;
+  @include reset-block;
 
-  width: 24px;
-  height: 24px;
-  background-image: url('@images/icons/checkbox_off.svg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  transition: background 200ms ease-out;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 
-  &_error {
-    background-image: url('@images/icons/checkbox_error.svg');
+  &__input {
+    @include reset-checkbox;
+
+    width: 24px;
+    height: 24px;
+    background-image: url('@images/icons/checkbox_off.svg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition:
+      background 200ms ease-out,
+      opacity 200ms ease-out;
+
+    &_error {
+      background-image: url('@images/icons/checkbox_error.svg');
+    }
+
+    &:checked {
+      background-image: url('@images/icons/checkbox_on.svg');
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
-  &:checked {
-    background-image: url('@images/icons/checkbox_on.svg');
+  &__text {
+    @include reset-text;
+    @include typography-caption-sub;
+
+    color: $color-main;
+    font-family: $font-family-main;
+    font-feature-settings:
+      'clig' off,
+      'liga' off;
+  }
+
+  &__link {
+    @include reset-link;
+    @include typography-caption-sub;
+
+    color: $color-green;
+    transition: opacity 200ms ease-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
