@@ -1,0 +1,97 @@
+.popup {
+  @include reset-block;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  &_open {
+    display: flex;
+  }
+
+  &__container {
+    position: relative;
+
+    @include reset-block;
+
+    width: 448px;
+    box-sizing: border-box;
+    display: flex;
+    padding: 48px 24px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-radius: 24px;
+    background-color: $color-bg-surface;
+    box-shadow: 0 5px 150px 0 $color-box-shadow;
+
+    @include media(md) {
+      width: 328px;
+      padding: 32px 16px 16px;
+      gap: 16px;
+    }
+  }
+
+  &__img {
+    height: 64px;
+  }
+
+  &__info {
+    @include reset-block;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+
+    @include media(md) {
+      gap: 8px;
+    }
+  }
+
+  &__title {
+    @include reset-text;
+    @include typography-h4;
+
+    color: $color-main;
+    font-family: $font-family-main;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include reset-text;
+    @include typography-body;
+
+    color: $color-main;
+    font-family: $font-family-main;
+    text-align: center;
+    opacity: 0.5;
+  }
+
+  &__btn-close {
+    @include reset-button;
+
+    width: 24px;
+    height: 24px;
+    box-sizing: content-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    border-radius: 8px;
+    opacity: 0.5;
+    transition: opacity 200ms ease-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
