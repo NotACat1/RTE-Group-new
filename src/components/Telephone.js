@@ -4,8 +4,8 @@ export default class Telephone {
   }
 
   formatting() {
-    this._telephone.addEventListener('input', (event) => {
-      const inputValue = event.target.value.replace(/\D/g, '');
+    this._telephone.addEventListener('input', (evt) => {
+      const inputValue = evt.target.value.replace(/\D/g, '');
       let rezValue = '';
       if (inputValue.length >= 0) {
         rezValue = '+7 ' + inputValue.substring(1, 4);
@@ -19,7 +19,7 @@ export default class Telephone {
       if (inputValue.length > 9) {
         rezValue = rezValue + '-' + inputValue.substring(9, 11);
       }
-      event.target.value = rezValue;
+      evt.target.value = rezValue;
     });
   }
 }

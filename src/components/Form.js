@@ -1,6 +1,16 @@
 export default class Form {
   constructor(
-    { selInput, classInputErr, classTextErr, selCheckbox, classCheckboxErr, selBtnSub, classBtnSubOn, classBtnSubOff },
+    {
+      selInput,
+      classInputErr,
+      classLabelErr,
+      classTextErr,
+      selCheckbox,
+      classCheckboxErr,
+      selBtnSub,
+      classBtnSubOn,
+      classBtnSubOff,
+    },
     elemForm,
     openPopupSuccess,
   ) {
@@ -9,6 +19,8 @@ export default class Form {
     // inputs
     this._elemInputs = [...elemForm.querySelectorAll(selInput)].filter((item) => item.hasAttribute('required'));
     this._classInputErr = classInputErr;
+    // label
+    this._classLabelErr = classLabelErr;
     // text error
     this._classTextErr = classTextErr;
     // checkboxs
@@ -43,17 +55,21 @@ export default class Form {
   }
 
   _showInputError(elemInput, mesErr) {
-    const elemError = this._form.querySelector(`#${elemInput.id}-error`);
+    const elemErr = this._form.querySelector(`span#${elemInput.id}-error`);
+    const labelErr = this._form.querySelector(`label.input__label[for="${elemInput.id}"]`);
     elemInput.classList.add(this._classInputErr);
-    elemError.classList.add(this._classTextErr);
-    elemError.textContent = mesErr;
+    elemErr.classList.add(this._classTextErr);
+    elemErr.textContent = mesErr;
+    labelErr.classList.add(this._classLabelErr);
   }
 
   _hideInputError(elemInput) {
-    const elemError = this._form.querySelector(`#${elemInput.id}-error`);
+    const elemErr = this._form.querySelector(`span#${elemInput.id}-error`);
+    const labelErr = this._form.querySelector(`label.input__label[for="${elemInput.id}"]`);
     elemInput.classList.remove(this._classInputErr);
-    elemError.classList.remove(this._classTextErr);
-    elemError.textContent = '';
+    elemErr.classList.remove(this._classTextErr);
+    elemErr.textContent = '';
+    labelErr.classList.remove(this._classLabelErr);
   }
 
   _isValid(elemInput) {

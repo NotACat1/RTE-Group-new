@@ -11,6 +11,7 @@ export const optionsForm = {
   selForm: '.form',
   selInput: '.input__input',
   classInputErr: 'input__input_error',
+  classLabelErr: 'input__label_error',
   classTextErr: 'input__error_error',
   selCheckbox: '.checkbox__input',
   classCheckboxErr: 'checkbox__input_error',
