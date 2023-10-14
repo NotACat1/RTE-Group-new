@@ -27,7 +27,7 @@ export const optionsPopup = {
 };
 
 export const optionsPopupSuccess = {
-  selPopupSuccess: '.popup.popup_success',
+  selPopupSuccess: '.popup.popup_modal',
   selTitle: '.popup__title',
   selSubtitle: '.popup__subtitle',
 };
@@ -38,4 +38,17 @@ export const optionsTextarea = {
 
 export const optionsTelephone = {
   selTelephone: 'input.input__input[type="tel"]',
+};
+
+export const optionsHeader = {
+  selHeader: '.header',
+  selContainer: '.header__nav-container',
+  classOpenContainer: 'header__nav-container_open',
+  selBtn: '.button.button_style_primary',
+  selHamburger: '.header__hamburger',
+  classOpenHamburger: 'header__hamburger_open',
+};
+
+export const selPopups = {
+  popupFormOrder: '.popup.popup_form',
 };
