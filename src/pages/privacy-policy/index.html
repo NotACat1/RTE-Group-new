@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta tags of site pages -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="RTE Group придает высший приоритет защите ваших личных данных и обеспечивает их конфиденциальность. В данной Политике конфиденциальности мы описываем, какие данные мы собираем, как используем эту информацию и как обеспечиваем ее защиту."
+    />
+    <meta name="keywords" content="HTML5, CSS, EJS, JS, RTE Group" />
+    <meta name="author" content="NotACat" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" href="<%= require('@images/favicon/apple-touch-icon.png') %>" />
+    <link rel="icon" href="<%= require('@images/favicon/favicon.ico') %>" sizes="16x16" type="image/x-icon" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="RTE Group: Политика конфиденциальности" />
+    <meta
+      property="og:description"
+      content="RTE Group придает высший приоритет защите ваших личных данных и обеспечивает их конфиденциальность. В данной Политике конфиденциальности мы описываем, какие данные мы собираем, как используем эту информацию и как обеспечиваем ее защиту."
+    />
+    <meta property="og:url" content="https://notacat1.github.io/RTE-Group-new/" />
+    <meta property="og:image" content="https://ie.wampi.ru/2023/10/04/social.png" />
+    <meta property="og:site_name" content="РТ Экспресс" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <title>RTE Group: Политика конфиденциальности</title>
+  </head>
+
+  <body class="page">
+    <%= require('@blocks/header/header.ejs').default %>
+    <main>
+      <section class="text">
+        <h1 class="text__title">Политика конфиденциальности</h1>
+        <ul class="text__list">
+          <li class="text__list-item">
+            <h2 class="text__list-item-title">Политика конфиденциальности</h2>
+            <p class="text__paragraph">
+              Эта политика конфиденциальности описывает, как мы собираем, используем и защищаем вашу личную информацию.
+              Мы ценим вашу доверенность и стремимся к соблюдению всех необходимых мер для ее защиты.
+            </p>
+          </li>
+          <li class="text__list-item">
+            <h2 class="text__list-item-title">Сбор информации</h2>
+            <p class="text__paragraph">
+              Мы собираем только ту информацию, которая необходима для предоставления вам запрашиваемых услуг или
+              информации. Это может включать в себя ваше имя, адрес электронной почты, номер телефона и другую
+              контактную информацию.
+            </p>
+          </li>
+          <li class="text__list-item">
+            <h2 class="text__list-item-title">Использование информации</h2>
+            <p class="text__paragraph">
+              Собранная нами информация используется исключительно для обработки ваших запросов и предоставления вам
+              необходимых услуг. Мы не раскрываем ваши данные третьим лицам без вашего разрешения.
+            </p>
+          </li>
+          <li class="text__list-item">
+            <h2 class="text__list-item-title">Защита данных</h2>
+            <p class="text__paragraph">
+              Мы принимаем все необходимые меры для защиты вашей личной информации от несанкционированного доступа,
+              утечек или утраты.
+            </p>
+          </li>
+          <li class="text__list-item">
+            <h2 class="text__list-item-title">Использование файлов cookie</h2>
+            <p class="text__paragraph">
+              Наш сайт может использовать файлы cookie для улучшения вашего опыта. Вы можете отключить файлы cookie в
+              настройках вашего браузера.
+            </p>
+          </li>
+          <li class="text__list-item">
+            <h2 class="text__list-item-title">Изменения в политике конфиденциальности</h2>
+            <p class="text__paragraph">
+              Мы оставляем за собой право вносить изменения в эту политику конфиденциальности. Любые изменения будут
+              опубликованы на нашем сайте.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <%= require('@blocks/footer/footer.ejs').default %>
+  </body>
+</html>

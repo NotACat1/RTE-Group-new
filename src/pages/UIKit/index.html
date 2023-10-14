@@ -31,7 +31,7 @@
   </head>
 
   <body class="page">
-    <header></header>
+    <%= require('@blocks/header/header.ejs').default %>
     <main>
       <section class="uikit">
         <div class="uikit__conteiner">
@@ -99,9 +99,13 @@
         <div class="uikit__conteiner">
           <h2 class="uikit__title">case</h2>
           <ul class="uikit__list uikit__list_full">
-            <li class="case">
-              <a class="case__elem" href="#" target="_blank">
-                <div class="case__img"></div>
+            <li class="case" data-service="Перевозка крупногабаритных грузов" data-sity="Казань">
+              <a class="case__link" href="#" target="_self">
+                <img
+                  class="case__img"
+                  src="<%= require('@images/cases/photo_2.jpg') %>"
+                  alt="Перевозка крупногабаритных грузов"
+                />
                 <div class="case__container">
                   <h3 class="case__title">Кейс</h3>
                   <p class="case__description">
@@ -121,12 +125,18 @@
       </section>
       <section class="uikit">
         <div class="uikit__conteiner">
-          <h2 class="uikit__title">advantages</h2>
+          <h2 class="uikit__title">cases</h2>
+          <%= require('@blocks/cases/cases_min.ejs').default %>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">advantage</h2>
           <ul class="uikit__list uikit__list_full">
-            <li class="advantages">
-              <img class="advantages__img" src="<%= require('@images/advantages/safety.svg') %>" alt="" />
-              <h3 class="advantages__title">Безопасность</h3>
-              <p class="advantages__description">
+            <li class="advantage">
+              <img class="advantage__img" src="<%= require('@images/advantages/safety.svg') %>" alt="" />
+              <h3 class="advantage__title">Безопасность</h3>
+              <p class="advantage__description">
                 Ваш экскаватор в надежных руках с RTE Group. Наша команда профессионалов следит за каждым этапом
                 перевозки, используя современное оборудование и проверенные методы для гарантии безопасности вашей
                 техники.
@@ -153,13 +163,16 @@
       </section>
       <section class="uikit">
         <div class="uikit__conteiner">
+          <h2 class="uikit__title">feedbacks</h2>
+          <%= require('@blocks/feedbacks/feedbacks.ejs').default %>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
           <h2 class="uikit__title">team</h2>
           <ul class="uikit__list uikit__list_full">
             <li class="team">
-              <div
-                class="team__avatar"
-                style="background-image: url(<%=require('@images/team/marat_giniyatullin.jpg')%>)"
-              ></div>
+              <img class="team__avatar" src="<%= require('@images/team/marat_giniyatullin.jpg') %>" alt="Аватар" />
               <div class="team__info">
                 <h3 class="team__name">Марат Гиниятуллин</h3>
                 <p class="team__description">Генеральный директор</p>
@@ -174,15 +187,27 @@
       </section>
       <section class="uikit">
         <div class="uikit__conteiner">
+          <h2 class="uikit__title">teams</h2>
+          <%= require('@blocks/teams/teams.ejs').default %>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
           <h2 class="uikit__title">city-link</h2>
           <ul class="uikit__list uikit__list_full">
             <li class="city-link">
-              <a class="city-link__elem" href="#" target="_blank">
-                <img class="city-link__gerb" src="<%= require('@images/gerbs/cheboksary.svg') %>" alt="" />
+              <a class="city-link__link" href="#" target="_self">
+                <img class="city-link__gerb" src="<%= require('@images/gerbs/kazan.svg') %>" alt="Герб города" />
                 <h3 class="city-link__title">Доставка в Казани</h3>
               </a>
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">city-links</h2>
+          <%= require('@blocks/city-links/city-links.ejs').default %>
         </div>
       </section>
       <section class="uikit">
@@ -200,39 +225,26 @@
       </section>
       <section class="uikit">
         <div class="uikit__conteiner">
-          <h2 class="uikit__title">services</h2>
+          <h2 class="uikit__title">service</h2>
           <ul class="uikit__list uikit__list_full">
-            <li class="services services_style_1">
-              <img
-                class="services__img"
-                src="<%= require('@images/services/nonstandard_cargo_transportation.svg') %>"
-                alt=""
-              />
-              <h3 class="services__title">Перевозка крупногабаритных грузов</h3>
-              <p class="services__description">
+            <li class="service">
+              <img class="service__img" src="<%= require('@images/services/excavator_transportation.svg') %>" alt="" />
+              <h3 class="service__title">Перевозка крупногабаритных грузов</h3>
+              <p class="service__description">
                 RTE Group доставит гидрогенераторы, вышки, металлоконструкции, детали промышленного оборудования и
                 другие грузы, с которыми обычные грузовики не справятся. Здесь нужен трал с тягачом. Помимо
                 непосредственной перевозки получим все необходимые разрешения от надзорных органов и подберем
                 оптимальный маршрут.
               </p>
-              <a class="button button_style_primary" href="#" target="_blank">Подробнее</a>
-            </li>
-            <li class="services services_style_2">
-              <img
-                class="services__img"
-                src="<%= require('@images/services/nonstandard_cargo_transportation.svg') %>"
-                alt=""
-              />
-              <h3 class="services__title">Перевозка крупногабаритных грузов</h3>
-              <p class="services__description">
-                RTE Group доставит гидрогенераторы, вышки, металлоконструкции, детали промышленного оборудования и
-                другие грузы, с которыми обычные грузовики не справятся. Здесь нужен трал с тягачом. Помимо
-                непосредственной перевозки получим все необходимые разрешения от надзорных органов и подберем
-                оптимальный маршрут.
-              </p>
-              <a class="button button_style_primary" href="#" target="_blank">Подробнее</a>
+              <a class="service__btn button button_style_outline" href="#" target="_self">Подробнее</a>
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
+          <h2 class="uikit__title">services</h2>
+          <%= require('@blocks/services/services.ejs').default %>
         </div>
       </section>
       <section class="uikit">
@@ -252,7 +264,7 @@
       </section>
       <section class="uikit">
         <div class="uikit__conteiner">
-          <h2 class="uikit__title">faq</h2>
+          <h2 class="uikit__title">faqs</h2>
           <ul class="uikit__list uikit__list_full">
             <li class="faq">
               <div class="faq__header">
@@ -271,12 +283,36 @@
       </section>
       <section class="uikit">
         <div class="uikit__conteiner">
+          <h2 class="uikit__title">faqs</h2>
+          <%= require('@blocks/faqs/faqs.ejs').default %>
+        </div>
+      </section>
+      <section class="uikit">
+        <div class="uikit__conteiner">
           <h2 class="uikit__title">form</h2>
+          <%= require('@blocks/form/form_main.ejs').default %> <%= require('@blocks/form/form_contact.ejs').default %>
+          <%= require('@blocks/form/form_vacancy.ejs').default %>
+        </div>
+      </section>
+      <div class="popup popup_modal">
+        <div class="popup__container popup__container_modal">
+          <img class="popup__img" src="<%= require('@images/icons/form_success.svg') %>" alt="" />
+          <div class="popup__info">
+            <h3 class="popup__title">Заявка отправлена!</h3>
+            <p class="popup__subtitle">Мы свяжемся с вами в ближайшее время</p>
+          </div>
+          <button
+            class="popup__btn-close"
+            style="background-image: url(<%=require('@images/icons/close.svg')%>)"
+          ></button>
+        </div>
+      </div>
+      <div class="popup popup_form">
+        <div class="popup__container popup__container_form">
           <form
             class="form"
             action="/submit"
             method="post"
-            id="main"
             data-popup-title="Заявка отправлена!"
             data-popup-subtitle="Мы свяжемся с вами в ближайшее время"
             novalidate
@@ -337,153 +373,13 @@
             </fieldset>
             <button class="button button_style_primary">Отправить</button>
           </form>
-          <form
-            class="form"
-            action="/submit"
-            method="post"
-            id="contact"
-            data-popup-title="Ваше обращение отправлено"
-            data-popup-subtitle="Мы свяжемся с вами в ближайшее время"
-            novalidate
-          >
-            <h2 class="form__title">Связаться с нами</h2>
-            <fieldset class="form__fieldset">
-              <div class="input">
-                <input
-                  class="input__input"
-                  title="Введите свое имя"
-                  type="text"
-                  id="contact-name"
-                  name="contact-name"
-                  placeholder=""
-                  data-mes-err="Поле обязательно для заполнения"
-                  required
-                />
-                <label class="input__label" for="contact-name">Имя<sup>*</sup></label>
-                <span class="input__error" id="contact-name-error"></span>
-              </div>
-              <div class="input">
-                <input
-                  class="input__input"
-                  title="Введите свою электронную почту"
-                  type="email"
-                  id="contact-email"
-                  name="contact-email"
-                  placeholder=""
-                  data-mes-err="Поле обязательно для заполнения"
-                  required
-                />
-                <label class="input__label" for="contact-email">E-mail<sup>*</sup></label>
-                <span class="input__error" id="contact-email-error"></span>
-              </div>
-              <div class="input">
-                <textarea
-                  class="input__input input__input_textarea"
-                  id="contact-characteristic"
-                  name="contact-characteristic"
-                  placeholder=""
-                ></textarea>
-                <label class="input__label" for="contact-characteristic">Текст сообщения</label>
-              </div>
-              <div class="checkbox">
-                <input
-                  class="checkbox__input"
-                  title="Подтвердите согласие на обработку персональных данных"
-                  type="checkbox"
-                  required
-                />
-                <p class="checkbox__text">
-                  Согласен на обработку персональных данных в соответствии с
-                  <a class="checkbox__link" href="#" target="_blank">политикой конфиденциальности</a>
-                </p>
-              </div>
-            </fieldset>
-            <button class="button button_style_primary">Отправить</button>
-          </form>
-          <form
-            class="form"
-            action="/submit"
-            method="post"
-            id="vacancy"
-            data-popup-title="Ваше резюме отправлено"
-            data-popup-subtitle="Мы свяжемся с вами в ближайшее время"
-            novalidate
-          >
-            <h2 class="form__title">Отправить резюме</h2>
-            <fieldset class="form__fieldset">
-              <div class="input">
-                <input
-                  class="input__input"
-                  title="Введите свое имя"
-                  type="text"
-                  id="vacancy-name"
-                  name="vacancy-name"
-                  placeholder=""
-                  data-mes-err="Поле обязательно для заполнения"
-                  required
-                />
-                <label class="input__label" for="vacancy-name">Имя<sup>*</sup></label>
-                <span class="input__error" id="vacancy-name-error"></span>
-              </div>
-              <div class="input">
-                <input
-                  class="input__input"
-                  title="Введите свою электронную почту"
-                  type="email"
-                  id="vacancy-email"
-                  name="vacancy-email"
-                  placeholder=""
-                  data-mes-err="Поле обязательно для заполнения"
-                  required
-                />
-                <label class="input__label" for="vacancy-email">E-mail<sup>*</sup></label>
-                <span class="input__error" id="vacancy-email-error"></span>
-              </div>
-              <div class="input">
-                <input
-                  class="input__input"
-                  title="Введите свой телефонный номер"
-                  type="tel"
-                  id="vacancy-tel"
-                  name="vacancy-tel"
-                  placeholder=""
-                  data-mes-err="Поле обязательно для заполнения"
-                  required
-                />
-                <label class="input__label" for="vacancy-tel">Телефон<sup>*</sup></label>
-                <span class="input__error" id="vacancy-tel-error"></span>
-              </div>
-              <div class="checkbox">
-                <input
-                  class="checkbox__input"
-                  title="Подтвердите согласие на обработку персональных данных"
-                  type="checkbox"
-                  required
-                />
-                <p class="checkbox__text">
-                  Согласен на обработку персональных данных в соответствии с
-                  <a class="checkbox__link" href="#" target="_blank">политикой конфиденциальности</a>
-                </p>
-              </div>
-            </fieldset>
-            <button class="button button_style_primary">Отправить</button>
-          </form>
-          <div class="popup popup_success">
-            <div class="popup__container">
-              <img class="popup__img" src="<%= require('@images/icons/form_success.svg') %>" alt="" />
-              <div class="popup__info">
-                <h3 class="popup__title">Заявка отправлена!</h3>
-                <p class="popup__subtitle">Мы свяжемся с вами в ближайшее время</p>
-              </div>
-              <button
-                class="popup__btn-close"
-                style="background-image: url(<%=require('@images/icons/close.svg')%>)"
-              ></button>
-            </div>
-          </div>
+          <button
+            class="popup__btn-close"
+            style="background-image: url(<%=require('@images/icons/close.svg')%>)"
+          ></button>
         </div>
-      </section>
+      </div>
     </main>
-    <footer></footer>
+    <%= require('@blocks/footer/footer.ejs').default %>
   </body>
 </html>

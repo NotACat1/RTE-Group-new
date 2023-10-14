@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta tags of site pages -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="RTE Group гарантирует безопасную и своевременную перевозку экскаваторов для успешных строительных и горнодобывающих проектов. Наш опыт и современная техника обеспечивают надежность и точность в доставке вашего оборудования."
+    />
+    <meta name="keywords" content="HTML5, CSS, EJS, JS, RTE Group" />
+    <meta name="author" content="NotACat" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" href="<%= require('@images/favicon/apple-touch-icon.png') %>" />
+    <link rel="icon" href="<%= require('@images/favicon/favicon.ico') %>" sizes="16x16" type="image/x-icon" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="RTE Group: Перевозка	экскаватора" />
+    <meta
+      property="og:description"
+      content="RTE Group гарантирует безопасную и своевременную перевозку экскаваторов для успешных строительных и горнодобывающих проектов. Наш опыт и современная техника обеспечивают надежность и точность в доставке вашего оборудования."
+    />
+    <meta property="og:url" content="https://notacat1.github.io/RTE-Group-new/" />
+    <meta property="og:image" content="https://ie.wampi.ru/2023/10/04/social.png" />
+    <meta property="og:site_name" content="РТ Экспресс" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <title>RTE Group: Перевозка экскаватора</title>
+  </head>
+
+  <body class="page">
+    <%= require('@blocks/header/header.ejs').default %>
+    <main>
+      <section class="service-form">
+        <div class="service-form__info-container">
+          <h1 class="service-form__title">Перевозка экскаватора</h1>
+          <div class="service-form__text">
+            <p class="service-form__paragraph">
+              Экскаваторы – это важная часть многих строительных и горнодобывающих проектов, и их безопасная и
+              своевременная перевозка является ключевым элементом успеха вашего бизнеса. В RTE Group мы понимаем эту
+              ответственность и предлагаем специализированные услуги по перевозке экскаваторов, на которые вы можете
+              полагаться.
+            </p>
+            <p class="service-form__paragraph">
+              Наши опытные специалисты, современный автопарк и внимание к деталям обеспечивают непревзойденное качество
+              услуги, адаптированной под ваши уникальные потребности. Мы знаем, как важна каждая деталь в перевозке
+              крупногабаритного оборудования, и мы здесь, чтобы убедиться, что ваш экскаватор будет доставлен в
+              надлежащем состоянии и точно в срок.
+            </p>
+          </div>
+        </div>
+        <%= require('@blocks/form/form_main.ejs').default %>
+      </section>
+      <section class="info-advantages">
+        <h2 class="info-advantages__title">Преимущества перевозки экскаватора с RTE Group</h2>
+        <%= require('@blocks/advantages/advantages_excavator-transportation.ejs').default %>
+      </section>
+      <section class="info-whywe">
+        <h2 class="info-whywe__title">Как Мы Работаем: Процесс Перевозки Экскаватора с RTE Group</h2>
+        <%= require('@blocks/whywes/whywes_excavator-transportation.ejs').default %>
+      </section>
+      <%= require('@blocks/price-list/price-list_excavator-transportation.ejs').default %>
+      <section class="article">
+        <h2 class="article__title">SEO-статья</h2>
+        <div class="article__info-container">
+          <p class="article__paragraph">
+            Мы хотим поделиться с вами опытом, накопленным за годы успешной работы в сфере негабаритных грузоперевозок.
+          </p>
+          <p class="article__paragraph">
+            Каждый кейс — это уникальная история, демонстрирующая наши ценности и обязательства перед клиентами. Они
+            показывают, как мы решаем сложные задачи, преодолеваем непредвиденные препятствия и находим эффективные
+            решения для наших заказчиков.
+          </p>
+          <p class="article__paragraph">
+            В наших кейсах вы найдете реальные примеры перевозок, от небольших, но нестандартных грузов до крупных и
+            особо сложных проектов. Эти примеры подтверждают нашу способность адаптироваться к различным условиям и
+            потребностям, предоставляя высококачественные услуги в разных сегментах рынка.
+          </p>
+          <p class="article__paragraph">
+            Наши кейсы — это не просто истории успеха; это подтверждение нашего постоянного стремления к совершенству и
+            нашего непрерывного развития в области негабаритных грузоперевозок. Мы приглашаем вас познакомиться с нашим
+            опытом, узнать больше о нашем подходе и увидеть, как RTE Group может стать вашим партнером в решении ваших
+            логистических задач.
+          </p>
+        </div>
+      </section>
+      <section class="info-cases">
+        <h2 class="info-cases__title">Кейсы</h2>
+        <a class="info-cases__btn button button_style_outline" href="#" target="_self">Все кейсы</a>
+        <div class="info-cases__container"><%= require('@blocks/cases/cases_min.ejs').default %></div>
+      </section>
+      <section class="info-feedbacks">
+        <h2 class="info-feedbacks__title">Отзывы клиентов</h2>
+        <%= require('@blocks/feedbacks/feedbacks_min.ejs').default %>
+      </section>
+      <section class="info-faq">
+        <h2 class="info-faq__title">Часто задаваемые вопросы</h2>
+        <%= require('@blocks/faqs/faqs.ejs').default %>
+      </section>
+    </main>
+    <%= require('@blocks/footer/footer.ejs').default %>
+  </body>
+</html>

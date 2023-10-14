@@ -1,12 +1,81 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Пример HTML-файла</title>
+    <!-- Meta tags of site pages -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="RTE Group - это команда высококвалифицированных профессионалов с богатым опытом в сферах строительства и ЖКХ. Мы специализируемся на негабаритной транспортировке грузов, предоставляя полный комплекс услуг с начала до конца процесса."
+    />
+    <meta name="keywords" content="HTML5, CSS, EJS, JS, RTE Group" />
+    <meta name="author" content="NotACat" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" href="<%= require('@images/favicon/apple-touch-icon.png') %>" />
+    <link rel="icon" href="<%= require('@images/favicon/favicon.ico') %>" sizes="16x16" type="image/x-icon" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="RTE Group: Home" />
+    <meta
+      property="og:description"
+      content="RTE Group - это команда высококвалифицированных профессионалов с богатым опытом в сферах строительства и ЖКХ. Мы специализируемся на негабаритной транспортировке грузов, предоставляя полный комплекс услуг с начала до конца процесса."
+    />
+    <meta property="og:url" content="https://notacat1.github.io/RTE-Group-new/" />
+    <meta property="og:image" content="https://ie.wampi.ru/2023/10/04/social.png" />
+    <meta property="og:site_name" content="РТ Экспресс" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <title>RTE Group: Главная</title>
   </head>
 
-  <body>
-
+  <body class="page">
+    <%= require('@blocks/header/header.ejs').default %>
+    <main>
+      <section class="form-info">
+        <%= require('@blocks/form/form_main.ejs').default %>
+        <div class="info-form__info-container">
+          <h2 class="info-form__title">RTE Group</h2>
+          <div class="info-form__info">
+            <p class="info-form__paragraph">
+              RTE Group создана командой профессионалов с серьезным опытом в сферах строительства и ЖКХ.
+            </p>
+            <p class="info-form__paragraph">
+              Мы отлично понимаем все задачи и вызовы, которые возникают при перевозке крупногабаритных и негабаритных
+              грузов, и имеем все необходимые ресурсы для их решения.
+            </p>
+            <p class="info-form__paragraph">
+              Мы оказываем полный комплекс услуг, связанных с негабаритной транспортировкой грузов автотранспортом,
+              начиная от согласования маршрута и заканчивая погрузкой и разгрузкой вашего груза или техники.
+            </p>
+          </div>
+          <a class="button button_style_outline button_width_full" href="#" target="_self">Подробнее</a>
+        </div>
+      </section>
+      <%= require('@blocks/services/services_header.ejs').default %>
+      <section class="info-whywe">
+        <h2 class="info-whywe__title">Почему мы?</h2>
+        <%= require('@blocks/whywes/whywes.ejs').default %>
+      </section>
+      <section class="map">
+        <div class="map__container">
+          <div class="map__info-container">
+            <h2 class="map__title">Города</h2>
+            <p class="map__paragraph">
+              Наш головной офис находится в Казани. Также наши представительства открыты в Уфе, Ижевске, Ульяновске,
+              Йошкар-Оле, Нижнем Новгороде, Самаре, Перми и Чебоксарах.
+            </p>
+            <a class="button button_style_outline" href="#" target="_self">Подробнее</a>
+          </div>
+        </div>
+      </section>
+      <section class="info-cases">
+        <h2 class="info-cases__title">Кейсы</h2>
+        <a class="info-cases__btn button button_style_outline" href="#" target="_self">Все кейсы</a>
+        <div class="info-cases__container"><%= require('@blocks/cases/cases_min.ejs').default %></div>
+      </section>
+    </main>
+    <%= require('@blocks/footer/footer.ejs').default %>
   </body>
 </html>

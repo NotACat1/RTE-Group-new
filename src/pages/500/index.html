@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta tags of site pages -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ошибка 500, также известная как Внутренняя ошибка сервера, является ответом сервера, который указывает на то, что произошла ошибка при обработке запроса, но сервер не может точно указать причину этой ошибки."
+    />
+    <meta name="keywords" content="HTML5, CSS, EJS, JS, RTE Group" />
+    <meta name="author" content="NotACat" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" href="<%= require('@images/favicon/apple-touch-icon.png') %>" />
+    <link rel="icon" href="<%= require('@images/favicon/favicon.ico') %>" sizes="16x16" type="image/x-icon" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="RTE Group: Ошибка 500" />
+    <meta
+      property="og:description"
+      content="Ошибка 500, также известная как Внутренняя ошибка сервера, является ответом сервера, который указывает на то, что произошла ошибка при обработке запроса, но сервер не может точно указать причину этой ошибки."
+    />
+    <meta property="og:url" content="https://notacat1.github.io/RTE-Group-new/" />
+    <meta property="og:image" content="https://ie.wampi.ru/2023/10/04/social.png" />
+    <meta property="og:site_name" content="РТ Экспресс" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <title>RTE Group: Ошибка 500</title>
+  </head>
+
+  <body class="page">
+    <%= require('@blocks/header/header.ejs').default %>
+    <main>
+      <section class="error">
+        <div class="error__container">
+          <h1 class="error__title">500</h1>
+          <div class="error__info-container">
+            <p class="error__subtitle">Внутренняя ошибка сервера</p>
+            <p class="error__info">Произошла внутренняя ошибка сервера. Попробуйте позже.</p>
+          </div>
+          <a class="button button_style_primary" href="#" target="_self">На главную</a>
+        </div>
+        <img class="error__img" src="<%= require('@images/errors/500.svg') %>" alt="Иконка ошибки" />
+      </section>
+    </main>
+    <%= require('@blocks/footer/footer.ejs').default %>
+  </body>
+</html>
