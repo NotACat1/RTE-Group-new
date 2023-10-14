@@ -1,0 +1,47 @@
+[
+  {
+    "iconPath": "~@images/gerbs/kazan.svg",
+    "name": "Казани",
+    "link": "#"
+  },
+  {
+    "iconPath": "~@images/gerbs/nizhniynov.svg",
+    "name": "Нижнем Новгороде",
+    "link": "#"
+  },
+  {
+    "iconPath": "~@images/gerbs/ufa.svg",
+    "name": "Уфе",
+    "link": "#"
+  },
+  {
+    "iconPath": "~@images/gerbs/samara.svg",
+    "name": "Самаре",
+    "link": "#"
+  },
+  {
+    "iconPath": "~@images/gerbs/izhevsk.svg",
+    "name": "Ижевске",
+    "link": "#"
+  },
+  {
+    "iconPath": "~@images/gerbs/perm.svg",
+    "name": "Перми",
+    "link": "#"
+  },
+  {
+    "iconPath": "~@images/gerbs/ulianovsk.svg",
+    "name": "Ульяновске",
+    "link": "#"
+  },
+  {
+    "iconPath": "~@images/gerbs/cheboksary.svg",
+    "name": "Чебоксарах",
+    "link": "#"
+  },
+  {
+    "iconPath": "~@images/gerbs/yoshkar-ola.svg",
+    "name": "Йошкар-Оле",
+    "link": "#"
+  }
+]
