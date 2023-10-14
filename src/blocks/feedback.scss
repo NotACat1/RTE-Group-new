@@ -1,9 +1,9 @@
 .feedback {
   @include reset-block;
 
-  width: 100%;
   display: grid;
   grid-template-columns: 48px auto;
+  grid-template-rows: min-content auto;
   gap: 16px;
   grid-template-areas:
     'A B'
@@ -23,9 +23,8 @@
     background-color: $color-bg-white;
     color: $color-main;
     font-family: $font-family-main;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: center center;
   }
 
   &__name {
