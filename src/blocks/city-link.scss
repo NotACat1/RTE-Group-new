@@ -1,28 +1,26 @@
 .city-link {
   @include reset-block;
 
-  width: 100%;
+  box-sizing: border-box;
+  padding: 24px;
+  height: 198px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 16px;
+  background-color: $color-bg-surface;
 
-  &__elem {
+  @include media(md) {
+    height: auto;
+    padding: 16px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  &__link {
     @include reset-link;
-
-    box-sizing: border-box;
-    padding: 24px;
-    height: 198px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    border-radius: 16px;
-    background-color: $color-bg-surface;
-
-    @include media(md) {
-      height: auto;
-      padding: 16px;
-      flex-direction: row;
-      justify-content: flex-start;
-      gap: 16px;
-    }
   }
 
   &__gerb {
