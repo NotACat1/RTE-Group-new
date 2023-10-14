@@ -3,14 +3,19 @@
 @import '@blocks/page';
 @import '@blocks/footer/footer';
 @import '@blocks/header/header';
-@import '@blocks/info-form';
 @import '@blocks/button';
 @import '@blocks/form/form';
-@import '@blocks/services/services';
+@import '@blocks/service-form';
 @import '@blocks/info-whywe';
 @import '@blocks/whywes/whywes';
-@import '@blocks/map';
+@import '@blocks/info-advantages';
+@import '@blocks/advantages/advantages';
 @import '@blocks/info-cases';
 @import '@blocks/cases/cases';
-
+@import '@blocks/article';
+@import '@blocks/info-faq';
+@import '@blocks/faqs/faqs';
+@import '@blocks/info-feedbacks';
+@import '@blocks/feedbacks/feedbacks';
+@import '@blocks/price-list/price-list';
 /* stylelint-enable */
