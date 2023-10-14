@@ -30,10 +30,14 @@
     }
 
     &_outline {
+      color: $color-green;
       border: 1px solid $color-green;
-      transition: border 200ms ease-out;
+      transition:
+        border 200ms ease-out,
+        color 200ms ease-out;
 
       &:hover {
+        color: $color-green-darker;
         border-color: $color-green-darker;
       }
     }
@@ -42,7 +46,7 @@
       transition: background 200ms ease-out;
 
       &:hover {
-        background: $color-bg-white;
+        background-color: $color-bg-white;
       }
     }
   }
@@ -50,6 +54,12 @@
   &_width {
     &_full {
       width: 100%;
+    }
+  }
+
+  &_size {
+    &_small {
+      padding: 8px 16px;
     }
   }
 }
