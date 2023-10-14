@@ -3,7 +3,7 @@
 
   width: 100%;
 
-  &__elem {
+  &__link {
     @include reset-link;
 
     display: block;
@@ -26,9 +26,8 @@
     height: 144px;
     border-radius: 16px;
     background-color: $color-bg-card;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: center center;
   }
 
   &__container {
