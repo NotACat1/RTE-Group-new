@@ -1,0 +1,92 @@
+.error {
+  @include reset-block;
+  @include container-max-widths;
+
+  box-sizing: border-box;
+  padding-top: 96px;
+  padding-bottom: 80px;
+  display: grid;
+  grid-template-columns: auto 384px;
+
+  @include media(md) {
+    padding-top: 56px;
+    padding-bottom: 80px;
+    grid-template-columns: auto;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include media(lg) {
+      gap: 32px;
+    }
+  }
+
+  &__title {
+    @include reset-text;
+    @include typography-h1;
+
+    color: $color-main;
+    font-family: $font-family-main;
+
+    @include media(md) {
+      text-align: center;
+    }
+  }
+
+  &__info-container {
+    @include reset-block;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__subtitle {
+    @include reset-text;
+    @include typography-h3;
+
+    @include media(lg) {
+      @include typography-h4;
+    }
+
+    @include media(md) {
+      text-align: center;
+    }
+
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+
+  &__info {
+    @include reset-text;
+    @include typography-lead;
+
+    @include media(lg) {
+      @include typography-body;
+    }
+
+    color: $color-main;
+    font-family: $font-family-main;
+    max-width: 360px;
+    opacity: 0.5;
+
+    @include media(md) {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    @include reset-block;
+
+    display: block;
+    width: 100%;
+
+    @include media(md) {
+      display: none;
+    }
+  }
+}
