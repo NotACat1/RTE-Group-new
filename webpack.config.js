@@ -1,10 +1,33 @@
+const _ = require('lodash');
 const path = require('path');
 const fs = require('fs');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const pagesDir = path.resolve(`${__dirname}/src/pages`);
+
+const files = [
+  'advantagesExcavatorTransportation',
+  'cases',
+  'cityLinks',
+  'faq',
+  'feedbacks',
+  'footer',
+  'header',
+  'priceListExcavatorTransportation',
+  'services',
+  'teams',
+  'whywe',
+  'whyweExcavatorTransportation',
+];
+
+const templateParameters = {};
+
+files.forEach((file) => {
+  templateParameters[`${file}Data`] = require(`./src/data/${file}-data.json`);
+});
 
 function generateEntries() {
   const entries = {};
@@ -25,6 +48,7 @@ function generateHtmlPlugins() {
       template,
       filename: `${page}.html`,
       chunks: [page],
+      templateParameters,
     });
   });
 }
@@ -100,6 +124,22 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: 'media/[hash][ext][query]',
+        },
+      },
+      {
+        test: /\.ejs$/i,
+        loader: 'html-loader',
+        options: {
+          preprocessor: (content, loaderContext) => {
+            let result;
+            try {
+              result = _.template(content)(templateParameters);
+            } catch (error) {
+              loaderContext.emitError(error);
+              return content;
+            }
+            return result;
+          },
         },
       },
     ],
