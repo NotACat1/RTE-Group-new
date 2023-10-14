@@ -1,0 +1,9 @@
+<ul class="advantages advantages_columns_2">
+	<% advantagesExcavatorTransportationData.forEach(advantage => { %>
+		<li class="advantage">
+			<img class="advantage__img" src="<%= advantage.imgPath %>" alt="<%= advantage.name %>" />
+			<h3 class="advantage__title"><%= advantage.name %></h3>
+			<p class="advantage__description"><%= advantage.description %></p>
+		</li>
+	<% }) %>
+</ul>
