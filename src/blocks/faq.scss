@@ -5,6 +5,10 @@
   box-sizing: border-box;
   border-bottom: 1px solid $color-darkgray;
 
+  &:last-child {
+    border-bottom: none;
+  }
+
   &__header {
     @include reset-block;
 
