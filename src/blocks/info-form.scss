@@ -1,0 +1,59 @@
+.info-form {
+  @include reset-block;
+  @include container-max-widths;
+
+  box-sizing: border-box;
+  padding-top: 104px;
+  padding-bottom: 104px;
+  display: grid;
+  grid-template-columns: 480px auto;
+  align-items: center;
+  gap: 72px;
+
+  @include media(lg) {
+    gap: 40px;
+    grid-template-columns: 328px auto;
+  }
+
+  @include media(md) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    grid-template-columns: auto;
+    gap: 80px;
+  }
+
+  &__info-container {
+    @include reset-block;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  &__title {
+    @include reset-text;
+    @include typography-h2;
+
+    @include media(lg) {
+      @include typography-h3;
+    }
+
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__paragraph {
+    @include reset-text;
+    @include typography-body;
+
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+}

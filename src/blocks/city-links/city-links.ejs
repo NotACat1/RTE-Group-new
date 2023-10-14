@@ -1,0 +1,10 @@
+<ul class="city-links">
+  <% cityLinksData.forEach(cityLink => { %>
+  <li class="city-link">
+    <a class="city-link__link" href="<%= cityLink.link %>" target="_self">
+      <img class="city-link__gerb" src="<%= cityLink.iconPath %>" alt="Герб города" />
+      <h3 class="city-link__title">Доставка в <%= cityLink.name %></h3>
+    </a>
+  </li>
+  <% }) %>
+</ul>

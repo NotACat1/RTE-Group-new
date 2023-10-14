@@ -1,0 +1,9 @@
+<ul class="feedbacks">
+  <% feedbacksData.forEach(feedback => { %>
+  <li class="feedback">
+    <div class="feedback__avatar"><%= feedback.avatar %></div>
+    <h3 class="feedback__name"><%= feedback.name %></h3>
+    <p class="feedback__text"><%= feedback.feedback %></p>
+  </li>
+  <% }) %>
+</ul>

@@ -1,0 +1,64 @@
+<form
+  class="form form_default"
+  action="/submit"
+  method="post"
+  id="main"
+  data-popup-title="Заявка отправлена!"
+  data-popup-subtitle="Мы свяжемся с вами в ближайшее время"
+  novalidate
+>
+  <h2 class="form__title">Оставить заявку на перевозку</h2>
+  <fieldset class="form__fieldset">
+    <div class="input">
+      <input
+        class="input__input"
+        title="Введите свое имя"
+        type="text"
+        id="main-name"
+        name="main-name"
+        placeholder=""
+        data-mes-err="Поле обязательно для заполнения"
+        required
+      />
+      <label class="input__label" for="main-name">Имя<sup>*</sup></label>
+      <span class="input__error" id="main-name-error"></span>
+    </div>
+    <div class="input">
+      <input
+        class="input__input"
+        title="Введите свой телефонный номер"
+        type="tel"
+        id="main-tel"
+        name="main-tel"
+        placeholder=""
+        data-mes-err="Поле обязательно для заполнения"
+        required
+      />
+      <label class="input__label" for="main-tel">Телефон<sup>*</sup></label>
+      <span class="input__error" id="main-tel-error"></span>
+    </div>
+    <div class="input">
+      <textarea
+        class="input__input input__input_textarea"
+        id="main-characteristic"
+        name="main-characteristic"
+        placeholder=""
+        rows="4"
+      ></textarea>
+      <label class="input__label" for="main-characteristic">Краткая характеристика груза</label>
+    </div>
+    <div class="checkbox">
+      <input
+        class="checkbox__input"
+        title="Подтвердите согласие на обработку персональных данных"
+        type="checkbox"
+        required
+      />
+      <p class="checkbox__text">
+        Согласен на обработку персональных данных в соответствии с
+        <a class="checkbox__link" href="#" target="_blank">политикой конфиденциальности</a>
+      </p>
+    </div>
+  </fieldset>
+  <button class="button button_style_primary">Отправить</button>
+</form>

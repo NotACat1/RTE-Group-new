@@ -1,0 +1,63 @@
+<form
+  class="form form_default"
+  action="/submit"
+  method="post"
+  id="contact"
+  data-popup-title="Ваше обращение отправлено"
+  data-popup-subtitle="Мы свяжемся с вами в ближайшее время"
+  novalidate
+>
+  <h2 class="form__title">Связаться с нами</h2>
+  <fieldset class="form__fieldset">
+    <div class="input">
+      <input
+        class="input__input"
+        title="Введите свое имя"
+        type="text"
+        id="contact-name"
+        name="contact-name"
+        placeholder=""
+        data-mes-err="Поле обязательно для заполнения"
+        required
+      />
+      <label class="input__label" for="contact-name">Имя<sup>*</sup></label>
+      <span class="input__error" id="contact-name-error"></span>
+    </div>
+    <div class="input">
+      <input
+        class="input__input"
+        title="Введите свою электронную почту"
+        type="email"
+        id="contact-email"
+        name="contact-email"
+        placeholder=""
+        data-mes-err="Поле обязательно для заполнения"
+        required
+      />
+      <label class="input__label" for="contact-email">E-mail<sup>*</sup></label>
+      <span class="input__error" id="contact-email-error"></span>
+    </div>
+    <div class="input">
+      <textarea
+        class="input__input input__input_textarea"
+        id="contact-characteristic"
+        name="contact-characteristic"
+        placeholder=""
+      ></textarea>
+      <label class="input__label" for="contact-characteristic">Текст сообщения</label>
+    </div>
+    <div class="checkbox">
+      <input
+        class="checkbox__input"
+        title="Подтвердите согласие на обработку персональных данных"
+        type="checkbox"
+        required
+      />
+      <p class="checkbox__text">
+        Согласен на обработку персональных данных в соответствии с
+        <a class="checkbox__link" href="#" target="_blank">политикой конфиденциальности</a>
+      </p>
+    </div>
+  </fieldset>
+  <button class="button button_style_primary">Отправить</button>
+</form>

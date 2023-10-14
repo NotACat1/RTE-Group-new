@@ -1,0 +1,37 @@
+@import url('@blocks/service');
+
+.services {
+  @include reset-block;
+  @include reset-list;
+  @include container-max-widths;
+
+  padding-top: 104px;
+  padding-bottom: 104px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  @include media(lg) {
+    grid-template-columns: auto;
+    gap: 16px;
+  }
+
+  @include media(md) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &__title {
+    @include reset-text;
+    @include typography-h2;
+
+    @include media(md) {
+      @include typography-h3;
+
+      padding-bottom: 16px;
+    }
+
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+}

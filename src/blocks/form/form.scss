@@ -1,17 +1,25 @@
+@import url('@blocks/input');
+@import url('@blocks/checkbox');
+@import url('@blocks/button');
+
 .form {
   @include reset-block;
 
   width: 100%;
-  box-sizing: border-box;
-  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  border-radius: 24px;
-  background-color: $color-bg-surface;
-  box-shadow: 0 5px 150px 0 $color-box-shadow;
+  margin-bottom: auto;
 
-  @include media(md) {
+  &_default {
+    box-sizing: border-box;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: $color-bg-surface;
+    box-shadow: 0 5px 150px 0 $color-box-shadow;
+  }
+
+  @include media(lg) {
     padding: 16px;
     gap: 16px;
   }

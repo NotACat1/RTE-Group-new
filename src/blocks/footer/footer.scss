@@ -1,0 +1,101 @@
+.footer {
+  @include reset-block;
+
+  box-sizing: border-box;
+  padding-bottom: 40px;
+  opacity: 0.5;
+
+  &__container {
+    @include reset-block;
+    @include container-max-widths;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include media(lg) {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 24px;
+    }
+  }
+
+  &__logo {
+    @include reset-link;
+
+    @include media(lg) {
+      align-self: center;
+    }
+  }
+
+  &__logo-img {
+    @include reset-block;
+
+    width: 153px;
+
+    &_big {
+      display: block;
+
+      @include media(md) {
+        display: none;
+      }
+    }
+
+    &_small {
+      display: none;
+
+      @include media(md) {
+        display: block;
+      }
+    }
+  }
+
+  &__list {
+    @include reset-list;
+
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    row-gap: 8px;
+    column-gap: 56px;
+
+    @include media(lg) {
+      grid-template-columns: auto;
+      row-gap: 16px;
+      align-self: center;
+    }
+  }
+
+  &__list-item {
+    @include reset-block;
+
+    @include media(lg) {
+      margin: 0 auto;
+    }
+  }
+
+  &__list-link {
+    @include reset-link;
+    @include typography-copyright;
+
+    color: $color-main;
+    font-family: $font-family-main;
+    text-decoration-line: underline;
+    transition: opacity 200ms ease-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__copyright {
+    @include reset-text;
+    @include typography-body;
+
+    color: $color-main;
+    font-family: $font-family-main;
+
+    @include media(lg) {
+      align-self: center;
+    }
+  }
+}

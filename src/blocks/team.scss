@@ -1,9 +1,9 @@
 .team {
   @include reset-block;
 
-  width: 100%;
   display: grid;
   grid-template-columns: 72px auto;
+  grid-template-rows: min-content auto;
   row-gap: 16px;
   column-gap: 24px;
   grid-template-areas:
@@ -11,18 +11,20 @@
     'C C';
 
   &__avatar {
+    @include reset-block;
+
     grid-area: A;
     width: 100%;
-    height: 72px;
+    display: block;
     border-radius: 80px;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
     background-color: $color-bg-card;
   }
 
   &__info {
+    @include reset-block;
+
     grid-area: B;
+    height: fit-content;
     align-self: center;
   }
 

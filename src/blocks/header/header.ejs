@@ -1,0 +1,38 @@
+<header class="header">
+  <div class="header__header">
+    <div class="header__header-container">
+      <a class="header__logo" href="#" target="_self">
+        <img
+          class="header__logo-img header__logo-img_big"
+          src="~@images/logo/on_black/logo-horizontal.svg"
+          alt="Логотип RTE Group"
+        />
+        <img
+          class="header__logo-img header__logo-img_small"
+          src="~@images/logo/on_black/logo.svg"
+          alt="Логотип RTE Group"
+        />
+      </a>
+      <a class="header__tel" href="tel:+<%= headerData.tel.replace(/\D/g, '') %>">
+        <img class="header__tel-icon" src="~@images/icons/phone.svg" alt="Иконка телефона" />
+        <span class="header__tel-text"><%= headerData.tel %></span>
+      </a>
+      <button class="header__header-btn button button_style_primary button_size_small">Оформить заказ</button>
+      <button class="header__hamburger"></button>
+    </div>
+  </div>
+  <nav class="header__nav">
+    <div class="header__nav-container">
+      <ul class="header__links">
+        <% headerData.links.forEach(link => { %>
+        <li class="header__link-item">
+          <a class="header__link" href="<%= link.link %>" target="_self">
+            <p class="header__link-text"><%= link.name %></p>
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+      <button class="header__nav-btn button button_style_primary">Оформить заказ</button>
+    </div>
+  </nav>
+</header>

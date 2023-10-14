@@ -1,0 +1,17 @@
+<ul class="cases">
+  <% casesData.forEach(caseItem => { %>
+  <li class="case" data-service="<%= caseItem.service %>" data-sity="<%= caseItem.sity %>">
+    <a class="case__link" href="<%= caseItem.link %>" target="_self">
+      <img class="case__img" src="<%= caseItem.imgPath %>" alt="<%= caseItem.name %>" />
+      <div class="case__container">
+        <h3 class="case__title"><%= caseItem.name %></h3>
+        <p class="case__description"><%= caseItem.description %></p>
+        <ul class="case__list">
+          <li class="badge"><%= caseItem.service %></li>
+          <li class="badge"><%= caseItem.sity %></li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <% }) %>
+</ul>

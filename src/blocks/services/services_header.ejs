@@ -1,0 +1,13 @@
+<ul class="services">
+  <li>
+    <h2 class="services__title">Наши услуги</h2>
+  </li>
+  <% servicesData.forEach(service => { %>
+  <li class="service service_header_on">
+    <img class="service__img" src="<%= service.iconPath %>" alt="<%= service.name %>" />
+    <h3 class="service__title"><%= service.name %></h3>
+    <p class="service__description"><%= service.description %></p>
+    <a class="service__btn button button_style_outline" href="<%= service.link %>" target="_self">Подробнее</a>
+  </li>
+  <% }) %>
+</ul>

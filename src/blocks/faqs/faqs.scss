@@ -1,0 +1,8 @@
+@import url('@blocks/faq');
+
+.faqs {
+  @include reset-block;
+  @include reset-list;
+
+  width: 100%;
+}

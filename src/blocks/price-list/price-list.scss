@@ -1,0 +1,84 @@
+@import url('@blocks/table');
+
+.price-list {
+  @include reset-block;
+  @include container-max-widths;
+
+  box-sizing: border-box;
+  padding-top: 104px;
+  padding-bottom: 104px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  @include media(lg) {
+    gap: 40px;
+  }
+
+  @include media(md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    @include reset-text;
+    @include typography-h2;
+
+    @include media(lg) {
+      @include typography-h3;
+    }
+
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+
+  &__list {
+    @include reset-block;
+    @include reset-list;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
+    @include media(md) {
+      display: flex;
+    }
+  }
+
+  &__list-item {
+    @include reset-block;
+
+    box-sizing: border-box;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    border-bottom: 1px solid $color-darkgray;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  &__list-title {
+    @include reset-text;
+    @include typography-body-semibold;
+
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+
+  &__list-price {
+    @include reset-text;
+    @include typography-body;
+
+    color: $color-main;
+    font-family: $font-family-main;
+    opacity: 0.7;
+
+    &::after {
+      content: ' \20bd';
+    }
+  }
+}

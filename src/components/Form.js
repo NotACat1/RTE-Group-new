@@ -93,7 +93,7 @@ export default class Form {
   }
 
   _reset() {
-    this._form.target.reset();
+    this._form.reset();
     this._elemCheckboxs.forEach((itemCheckbox) => {
       itemCheckbox.classList.remove(this._classCheckboxErr);
     });

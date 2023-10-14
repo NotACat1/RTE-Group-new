@@ -1,0 +1,11 @@
+<ul class="faqs">
+  <% faqData.forEach(faqItem => { %>
+  <li class="faq">
+    <div class="faq__header">
+      <h3 class="faq__title"><%= faqItem.question %></h3>
+      <div class="faq__btn"></div>
+    </div>
+    <p class="faq__text"><%= faqItem.answer %></p>
+  </li>
+  <% }) %>
+</ul>

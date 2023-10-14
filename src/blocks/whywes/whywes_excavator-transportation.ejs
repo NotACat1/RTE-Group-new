@@ -1,0 +1,9 @@
+<ul class="whywes">
+  <% whyweExcavatorTransportationData.forEach((whyweItem,index) => { %>
+  <li class="whywe">
+    <div class="whywe__img"><%= index + 1 %></div>
+    <h3 class="whywe__title"><%= whyweItem.name %></h3>
+    <p class="whywe__description"><%= whyweItem.description %></p>
+  </li>
+  <% }) %>
+</ul>

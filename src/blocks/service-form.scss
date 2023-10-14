@@ -1,0 +1,64 @@
+.service-form {
+  @include reset-block;
+  @include container-max-widths;
+
+  box-sizing: border-box;
+  padding-top: 96px;
+  padding-bottom: 64px;
+  display: grid;
+  grid-template-columns: auto 480px;
+  gap: 65px;
+
+  @include media(lg) {
+    grid-template-columns: auto 328px;
+    gap: 40px;
+  }
+
+  @include media(md) {
+    padding-top: 56px;
+    padding-bottom: 40px;
+    grid-template-columns: auto;
+    gap: 80px;
+  }
+
+  &__info-container {
+    @include reset-block;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include media(lg) {
+      gap: 24px;
+    }
+  }
+
+  &__title {
+    @include reset-text;
+    @include typography-h2;
+
+    @include media(lg) {
+      @include typography-h3;
+    }
+
+    color: $color-main;
+    font-family: $font-family-main;
+    width: min-content;
+  }
+
+  &__text {
+    @include reset-block;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__paragraph {
+    @include reset-text;
+    @include typography-body;
+
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+}

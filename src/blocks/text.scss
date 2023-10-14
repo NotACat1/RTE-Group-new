@@ -1,0 +1,68 @@
+.text {
+  @include reset-block;
+  @include container-max-widths;
+
+  box-sizing: border-box;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include media(lg) {
+    gap: 24px;
+  }
+
+  @include media(md) {
+    padding-top: 56px;
+    padding-bottom: 80px;
+  }
+
+  &__title {
+    @include reset-text;
+    @include typography-h2;
+
+    @include media(lg) {
+      @include typography-h3;
+    }
+
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+
+  &__list {
+    @include reset-list;
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  &__list-item {
+    @include reset-block;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__list-item-title {
+    @include reset-text;
+    @include typography-h3;
+
+    @include media(lg) {
+      @include typography-h4;
+    }
+
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+
+  &__paragraph {
+    @include reset-text;
+    @include typography-body;
+
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+}

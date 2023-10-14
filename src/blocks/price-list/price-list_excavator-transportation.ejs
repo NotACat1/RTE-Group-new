@@ -1,0 +1,25 @@
+<section class="price-list">
+  <h2 class="price-list__title">Прайс-лист</h2>
+  <table class="table">
+    <tr>
+      <th class="table__th">#</th>
+      <th class="table__th">Услуга</th>
+      <th class="table__th">Стомиость</th>
+    </tr>
+    <% priceListExcavatorTransportationData.forEach(priceList => { %>
+    <tr>
+      <td class="table__td"><%= priceList.id %></td>
+      <td class="table__td"><%= priceList.name %></td>
+      <td class="table__td table__td_price"><%= priceList.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") %></td>
+    </tr>
+    <% }) %>
+  </table>
+  <ul class="price-list__list">
+    <% priceListExcavatorTransportationData.forEach(priceList => { %>
+    <li class="price-list__list-item">
+      <h3 class="price-list__list-title"><%= priceList.name %> / <%= priceList.description %></h3>
+      <p class="price-list__list-price"><%= priceList.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") %></p>
+    </li>
+    <% }) %>
+  </ul>
+</section>

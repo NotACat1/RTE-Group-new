@@ -1,0 +1,29 @@
+.info-feedbacks {
+  @include reset-block;
+  @include container-max-widths;
+
+  box-sizing: border-box;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+
+  @include media(md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    @include reset-text;
+    @include typography-h2;
+
+    @include media(lg) {
+      @include typography-h3;
+    }
+
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+}

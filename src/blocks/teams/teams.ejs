@@ -1,0 +1,12 @@
+<ul class="teams">
+  <% teamsData.forEach(team => { %>
+  <li class="team">
+    <img class="team__avatar" src="<%= team.avatarPath %>" alt="Аватар <%= team.name %>" />
+    <div class="team__info">
+      <h3 class="team__name"><%= team.name %></h3>
+      <p class="team__description"><%= team.post %></p>
+    </div>
+    <p class="team__text"><%= team.description %></p>
+  </li>
+  <% }) %>
+</ul>

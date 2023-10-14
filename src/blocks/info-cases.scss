@@ -1,0 +1,56 @@
+.info-cases {
+  @include reset-block;
+  @include container-max-widths;
+
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 104px;
+  padding-bottom: 104px;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 40px;
+  grid-template-areas:
+    'A B'
+    'C C';
+
+  @include media(md) {
+    row-gap: 0;
+    grid-template-areas:
+      'A'
+      'C'
+      'B';
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &__title {
+    @include reset-text;
+    @include typography-h2;
+
+    @include media(lg) {
+      @include typography-h3;
+    }
+
+    @include media(md) {
+      margin-bottom: 32px;
+    }
+
+    grid-area: A;
+    color: $color-main;
+    font-family: $font-family-main;
+  }
+
+  &__btn {
+    grid-area: B;
+    margin-left: auto;
+  }
+
+  &__container {
+    grid-area: C;
+
+    @include media(md) {
+      margin-bottom: 16px;
+    }
+  }
+}
