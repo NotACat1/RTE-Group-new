@@ -1,5 +1,6 @@
-@import url('@blocks/service');
-
+/* stylelint-disable */
+@import '@blocks/service';
+/* stylelint-enable */
 .services {
   @include reset-block;
   @include reset-list;

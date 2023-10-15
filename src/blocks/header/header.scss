@@ -1,5 +1,6 @@
-@import url('@blocks/button');
-
+/* stylelint-disable */
+@import '@blocks/button';
+/* stylelint-enable */
 .header {
   @include reset-block;
 

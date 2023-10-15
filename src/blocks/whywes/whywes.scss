@@ -1,5 +1,6 @@
-@import url('@blocks/whywe');
-
+/* stylelint-disable */
+@import '@blocks/whywe';
+/* stylelint-enable */
 .whywes {
   @include reset-block;
   @include reset-list;

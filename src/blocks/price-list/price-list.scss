@@ -1,5 +1,6 @@
-@import url('@blocks/table');
-
+/* stylelint-disable */
+@import '@blocks/table';
+/* stylelint-enable */
 .price-list {
   @include reset-block;
   @include container-max-widths;

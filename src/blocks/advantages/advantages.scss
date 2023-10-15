@@ -1,5 +1,6 @@
-@import url('@blocks/advantage');
-
+/* stylelint-disable */
+@import '@blocks/advantage';
+/* stylelint-enable */
 .advantages {
   @include reset-block;
   @include reset-list;

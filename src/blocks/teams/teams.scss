@@ -1,5 +1,6 @@
-@import url('@blocks/team');
-
+/* stylelint-disable */
+@import '@blocks/team';
+/* stylelint-enable */
 .teams {
   @include reset-block;
   @include reset-list;

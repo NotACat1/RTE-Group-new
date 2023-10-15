@@ -1,7 +1,8 @@
-@import url('@blocks/input');
-@import url('@blocks/checkbox');
-@import url('@blocks/button');
-
+/* stylelint-disable */
+@import '@blocks/input';
+@import '@blocks/checkbox';
+@import '@blocks/button';
+/* stylelint-enable */
 .form {
   @include reset-block;
 

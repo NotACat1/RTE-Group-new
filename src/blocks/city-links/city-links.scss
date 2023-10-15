@@ -1,5 +1,6 @@
-@import url('@blocks/city-link');
-
+/* stylelint-disable */
+@import '@blocks/city-link';
+/* stylelint-enable */
 .city-links {
   @include reset-block;
   @include reset-list;

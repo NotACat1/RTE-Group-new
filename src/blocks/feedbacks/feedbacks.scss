@@ -1,5 +1,6 @@
-@import url('@blocks/feedback');
-
+/* stylelint-disable */
+@import '@blocks/feedback';
+/* stylelint-enable */
 .feedbacks {
   @include reset-block;
   @include reset-list;

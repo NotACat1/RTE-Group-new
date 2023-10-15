@@ -1,6 +1,7 @@
-@import url('@blocks/case');
-@import url('@blocks/badge');
-
+/* stylelint-disable */
+@import '@blocks/case';
+@import '@blocks/badge';
+/* stylelint-enable */
 .cases {
   @include reset-block;
   @include reset-list;
